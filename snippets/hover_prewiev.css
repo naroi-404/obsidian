@@ -13,7 +13,7 @@
 .markdown-embed {
     position: relative;
 }
-/* bluruje koncowke preview*/
+/* blures end of the preview*/
 .markdown-embed::after {
     content: "";
     position: absolute;
@@ -23,4 +23,22 @@
     height: 40px; /* how much of the bottom should be blured */
     background: linear-gradient(transparent, var(--background-secondary));
     pointer-events: none; 
+}
+
+/* removes the bold effect from the text */
+.markdown-embed .markdown-rendered {
+    font-weight: 400 !important;
+}
+
+.markdown-embed .markdown-rendered h1,
+.markdown-embed .markdown-rendered h2,
+.markdown-embed .markdown-rendered h3,
+.markdown-embed .markdown-rendered h4,
+.markdown-embed .markdown-rendered p,
+.markdown-embed .markdown-rendered li {
+    font-weight: 400 !important;
+}
+
+.markdown-embed-title {
+    font-weight: 400 !important;
 }
