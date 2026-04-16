@@ -1,0 +1,13 @@
+```dataviewjs
+let currentDay = dv.current().file.day; 
+
+if (currentDay) { 
+	let count = dv.pages() .where(p => p.date && p.date.ts === currentDay.ts) .length; 
+	dv.paragraph("Files created that day: **" + count + "**"); } 
+
+```
+```dataview
+LIST WHERE date = this.file.day
+```
+
+
