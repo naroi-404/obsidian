@@ -1,3 +1,8 @@
+/* 
+template that creates the list of files created the exact date (made for daily notes so it imports the date from the title) and counts them
+Dataview plugin is obligatory
+*/
+
 ```dataviewjs
 let currentDay = dv.current().file.day; 
 
