@@ -1,0 +1,29 @@
+```dataviewjs 
+dv.span("chinese") 
+const calendarData = {
+	year: 2026,  
+	colors: {   
+		red:         ["#ff0000", "#e10000", "#c70000", "#ae0000", "#960000"],
+		green:       ["#52bf90", "#49ab81","#419873", "#398564", "#317256"],
+		pink:        ["#ffc2cd","#ff93ac","#ff6289","#fc3468","#ff084a"],
+		blue:        ["#011f4b", "#03396c","#005b96","#6497b1","#b3cde0"],
+	},
+	showCurrentDayBorder: true, 
+	defaultEntryIntensity: 4,   
+	intensityScaleStart: 10,    
+	intensityScaleEnd: 100,     
+	entries: [],                
+}
+
+for (let page of dv.pages('"Daily Note"').where(p => p.chinese)) {
+	calendarData.entries.push({
+		date: page.file.name,    
+		intensity: page.chinese, 
+		content: "",           
+		color: "red",          
+	})
+}
+
+renderHeatmapCalendar(this.container, calendarData)
+
+```
